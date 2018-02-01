@@ -7,6 +7,10 @@
  */
 
 #include <Arduino.h>
+#include "cpu.h"
+#include "sound.h"
+#include "gfx.h"
+#include "pad.h"
 
 #ifndef UNIT_TEST
 
