@@ -16,6 +16,9 @@ const unsigned short CPU_MEM_SIZE = 4096;
 /// Registry V size
 const unsigned char CPU_V_SIZE = 16;
 
+/// Stack size
+const unsigned char CPU_STACK_SIZE = 16;
+
 /// Program counter
 unsigned char cpu_pc;
 
@@ -33,3 +36,9 @@ unsigned short cpu_i;
 
 /// Delay timer
 unsigned char cpu_delay;
+
+/// Stack
+unsigned short cpu_stack[CPU_STACK_SIZE];
+
+/// Stack pointer
+unsigned short cpu_sp;
