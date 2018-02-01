@@ -1,0 +1,6 @@
+<map id="src/main.cpp" name="src/main.cpp">
+<area shape="rect" id="node3" href="$cpu_8h.html" title="CPU header. " alt="" coords="107,80,162,107"/>
+<area shape="rect" id="node4" href="$sound_8h.html" title="Sound header. " alt="" coords="186,80,254,107"/>
+<area shape="rect" id="node5" href="$gfx_8h.html" title="GFX header. " alt="" coords="279,80,329,107"/>
+<area shape="rect" id="node6" href="$pad_8h.html" title="Pad header. " alt="" coords="354,80,409,107"/>
+</map>
