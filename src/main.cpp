@@ -15,11 +15,17 @@
 #ifndef UNIT_TEST
 
 void setup() {
-    // put your setup code here, to run once:
+    cpu_init();
+    sound_init();
+    gfx_init();
+    pad_init();
 }
 
 void loop() {
-    // put your main code here, to run repeatedly:
+    cpu_cycle();
+    sound_cycle();
+    gfx_cycle();
+    pad_cycle();
 }
 
 #endif

@@ -10,8 +10,23 @@
 //  Constants & variables
 //
 
-/// Pad size (buttons number)
+/// Pad size (keys count)
 const unsigned char PAD_SIZE = 16;
 
 /// Pad status
 bool pad_status[PAD_SIZE];
+
+
+//
+//  Functions
+//
+
+/**
+ *  Init Pad
+ */
+void pad_init(void);
+
+/**
+ *  Pad cycle
+ */
+void pad_cycle(void);

@@ -18,3 +18,18 @@ const unsigned char GFX_HEIGHT = 32;
 
 /// Screen matrix
 bool gfx_matrix[GFX_WIDTH * GFX_HEIGHT];
+
+
+//
+//  Functions
+//
+
+/**
+ *  Init display
+ */
+void gfx_init(void);
+
+/**
+ *  GFX cycle
+ */
+void gfx_cycle(void);

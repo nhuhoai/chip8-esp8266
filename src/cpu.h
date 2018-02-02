@@ -6,39 +6,24 @@
  *  @brief    CPU header
  */
 
-//
-//  Constants & variables
-//
+ //
+ //  Constants & variables
+ //
 
-/// Memory size
-const unsigned short CPU_MEM_SIZE = 4096;
+ /// CPU Speed [Hz]
+ const unsigned char CPU_SPEED = 60;
 
-/// Registry V size
-const unsigned char CPU_V_SIZE = 16;
 
-/// Stack size
-const unsigned char CPU_STACK_SIZE = 16;
+ //
+ //  Functions
+ //
 
-/// Program counter
-unsigned char cpu_pc;
+ /**
+ *  Init CPU
+ */
+ void cpu_init(void);
 
-/// Current opcode
-unsigned short cpu_opc;
-
-/// Memory
-unsigned char cpu_mem[CPU_MEM_SIZE];
-
-/// Registry V
-unsigned char cpu_v[CPU_V_SIZE];
-
-/// Registry index i
-unsigned short cpu_i;
-
-/// Delay timer
-unsigned char cpu_delay;
-
-/// Stack
-unsigned short cpu_stack[CPU_STACK_SIZE];
-
-/// Stack pointer
-unsigned short cpu_sp;
+ /**
+ *  CPU life cycle
+ */
+ void cpu_cycle(void);
