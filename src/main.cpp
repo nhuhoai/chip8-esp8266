@@ -6,13 +6,13 @@
  *  @brief    Main call file for Chip-8 emulator
  */
 
+#ifndef UNIT_TEST
+
 #include <Arduino.h>
 #include "cpu.h"
 #include "sound.h"
 #include "gfx.h"
 #include "pad.h"
-
-#ifndef UNIT_TEST
 
 void setup() {
     cpu_init();

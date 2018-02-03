@@ -6,11 +6,11 @@
  *  @brief    Unit test
  */
 
+#ifdef UNIT_TEST
+
 #include <Arduino.h>
 #include <unity.h>
 #include "test_constants.h"
-
-#ifdef UNIT_TEST
 
 unsigned char cycle = 0;
 
@@ -28,6 +28,10 @@ void loop() {
 
     case 1:
       RUN_TEST(test_cpu_constants);
+      break;
+
+    case 1:
+      RUN_TEST(test_gfx_constants);
       break;
 
     default:
