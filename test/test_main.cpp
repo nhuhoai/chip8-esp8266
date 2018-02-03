@@ -30,7 +30,7 @@ void loop() {
       RUN_TEST(test_cpu_constants);
       break;
 
-    case 1:
+    case 2:
       RUN_TEST(test_gfx_constants);
       break;
 
