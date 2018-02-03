@@ -10,7 +10,6 @@
 
 #include <Arduino.h>
 #include <unity.h>
-#include "test_constants.h"
 
 unsigned char cycle = 0;
 
@@ -22,6 +21,7 @@ void setup() {
 
 void loop() {
   switch(cycle) {
+    /*
     case 0:
       UNITY_BEGIN();
       break;
@@ -33,6 +33,7 @@ void loop() {
     case 2:
       RUN_TEST(test_gfx_constants);
       break;
+    */
 
     default:
       UNITY_END();
