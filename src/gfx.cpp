@@ -6,12 +6,27 @@
  *  @brief    GFX
  */
 
+#include "gfx.h"
+
+
+//
+//  Constants & variables
+//
+
+/// Screen matrix
+bool gfx_matrix[GFX_WIDTH * GFX_HEIGHT];
+
+
 //
 //  Functions
 //
 
 void gfx_init(void) {
+  unsigned char i;
 
+  for(i = 0; i < GFX_WIDTH * GFX_HEIGHT; i++) {
+    gfx_matrix[i] = 0;
+  }
 }
 
 void gfx_cycle(void) {

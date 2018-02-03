@@ -14,7 +14,7 @@
 const unsigned char PAD_SIZE = 16;
 
 /// Pad status
-bool pad_status[PAD_SIZE];
+extern bool pad_status[PAD_SIZE];
 
 
 //

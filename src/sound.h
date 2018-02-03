@@ -6,16 +6,24 @@
  *  @brief    Sound header
  */
 
- //
- //  Functions
- //
+//
+//  Constants & variables
+//
 
- /**
- *  Init CPU
- */
- void sound_init(void);
+/// Sound timer
+extern unsigned char sound_timer;
 
- /**
- *  Sound cycle
- */
- void sound_cycle(void);
+
+//
+//  Functions
+//
+
+/**
+*  Init CPU
+*/
+void sound_init(void);
+
+/**
+*  Sound cycle
+*/
+void sound_cycle(void);

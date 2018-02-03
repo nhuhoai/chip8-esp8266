@@ -6,6 +6,16 @@
  *  @brief    Pad
  */
 
+#include "pad.h"
+
+
+//
+//  Variables
+//
+
+/// Pad status
+bool pad_status[PAD_SIZE];
+
 
 //
 //  Functions

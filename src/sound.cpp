@@ -15,10 +15,7 @@
 //
 
 /// Sound timer
-unsigned char sound_delay;
-
-/// Sound ticker
-unsigned char sound_ticker;
+unsigned char sound_timer;
 
 
 //
@@ -30,21 +27,19 @@ unsigned char sound_ticker;
  *  Init sound
  */
 void sound_init(void) {
-  sound_delay = 0;
-  sound_ticker = 0;
+  sound_timer = 0;
 }
 
 /**
  *  Sound cycle
  */
 void sound_cycle(void) {
-  if(sound_delay > 0) {
-    if(sound_delay == 1) {
+  if(cpu_tick) {
+    if(sound_timer == 1) {
       // TODO Make sound
+    } else {
+      // TODO Make no sound
     }
-    if(sound_ticker + (1000 / CPU_SPEED) < millis()) {
-      sound_delay--;
-        sound_ticker = millis();
-    }
+    sound_timer--;
   }
 }
