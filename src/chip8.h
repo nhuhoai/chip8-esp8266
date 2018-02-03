@@ -1,12 +1,14 @@
 /**
- *  @file     sound.h
+ *  @file     chip8.h
  *  @version  0.1
  *  @date     2018-02-03
  *  @author   Nhu-Hoai Robert VO <nhuhoai.vo@nhuvo.ch>
- *  @brief    Chip-8 sound header
+ *  @brief    Chip-8 header
  */
 
-class Chip8Sound {
+#include "cpu.h"
+
+class Chip8 {
   public:
     void init(void);
     void cycle(void);

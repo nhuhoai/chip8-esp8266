@@ -1,32 +1,16 @@
 /**
  *  @file     pad.h
  *  @version  0.1
- *  @date     2018-02-01
+ *  @date     2018-02-03
  *  @author   Nhu-Hoai Robert VO <nhuhoai.vo@nhuvo.ch>
- *  @brief    Pad header
+ *  @brief    Chip-8 pad header
  */
 
-//
-//  Constants & variables
-//
+class Chip8Pad {
+  public:
+    void init(void);
+    void cycle(void);
 
-/// Pad size (keys count)
-const unsigned char PAD_SIZE = 16;
+  private:
 
-/// Pad status
-extern bool pad_status[PAD_SIZE];
-
-
-//
-//  Functions
-//
-
-/**
- *  Init Pad
- */
-void pad_init(void);
-
-/**
- *  Pad cycle
- */
-void pad_cycle(void);
+};

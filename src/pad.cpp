@@ -1,30 +1,17 @@
 /**
  *  @file     pad.cpp
  *  @version  0.1
- *  @date     2018-02-01
+ *  @date     2018-02-03
  *  @author   Nhu-Hoai Robert VO <nhuhoai.vo@nhuvo.ch>
- *  @brief    Pad
+ *  @brief    Chip-8 pad
  */
 
 #include "pad.h"
 
-
-//
-//  Variables
-//
-
-/// Pad status
-bool pad_status[PAD_SIZE];
-
-
-//
-//  Functions
-//
-
-void pad_init(void) {
+void Chip8Pad::init(void) {
 
 }
 
-void pad_cycle(void) {
+void Chip8Pad::cycle(void) {
 
 }
