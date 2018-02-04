@@ -18,6 +18,6 @@ class Chip8Sound {
      */
     void cycle(void);
 
-  private:
+  protected:
     unsigned char timer;
 };

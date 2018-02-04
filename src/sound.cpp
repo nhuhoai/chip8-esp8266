@@ -9,7 +9,7 @@
 #include "sound.h"
 
 void Chip8Sound::init(void) {
-
+  
 }
 
 void Chip8Sound::cycle(void) {

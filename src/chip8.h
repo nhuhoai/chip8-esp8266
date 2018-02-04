@@ -16,11 +16,11 @@ class Chip8 {
     void init(void);
     void cycle(void);
 
-  private:
+  protected:
     Chip8Cpu cpu;
     Chip8Gfx gfx;
     Chip8Pad pad;
     Chip8Sound sound;
-    
+
     unsigned char status;
 };

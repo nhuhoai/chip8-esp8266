@@ -13,5 +13,5 @@ void Chip8Cpu::init(void) {
 }
 
 void Chip8Cpu::cycle(void) {
-
+  
 }

@@ -21,6 +21,6 @@ class Chip8Pad {
      */
     void cycle(void);
 
-  private:
+  protected:
     bool pad[Chip8Pad::PAD_SIZE];
 };

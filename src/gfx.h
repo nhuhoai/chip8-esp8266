@@ -37,7 +37,7 @@ class Chip8Gfx {
      */
     void setGfx(unsigned short position, bool value);
 
-  private:
+  protected:
     /// Require a display update
     bool updateGfx;
     /// Display matrix

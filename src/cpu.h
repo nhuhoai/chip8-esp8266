@@ -21,13 +21,13 @@ class Chip8Cpu {
      *  Init Cpu
      */
     void init(void);
-    
+
     /**
      *  CPU life cycle
      */
     void cycle(void);
 
-  private:
+  protected:
     /// Memory
     unsigned char memory[Chip8Cpu::MEMORY_SIZE];
     /// Program counter
@@ -42,4 +42,6 @@ class Chip8Cpu {
     unsigned short stack[Chip8Cpu::STACK_SIZE];
     /// Stack pointer
     unsigned short sp;
+    /// Delay timer
+    unsigned char delay;
 };
