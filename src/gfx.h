@@ -6,11 +6,40 @@
  *  @brief    Chip-8 GFX header
  */
 
- class Chip8Gfx {
-   public:
-     void init(void);
-     void cycle(void);
+/**
+ *  @class  Chip8Gfx
+ */
+class Chip8Gfx {
+  public:
+    /// Display width
+    static const unsigned char WIDTH = 64;
+    /// Display heifht
+    static const unsigned char HEIGHT = 32;
+    /// Fontset size
+    static const unsigned char FONTSET_SIZE = 80;
+    /// Fontset
+    static const unsigned char FONTSET[Chip8Gfx::FONTSET_SIZE];
 
-   private:
+    /**
+     *  Init GFX part
+     */
+    void init(void);
 
- };
+    /**
+     *  GFX cycle life
+     */
+    void cycle(void);
+
+    /**
+     *  Update the display
+     *  @param  position (short)
+     *  @param  value (bool)
+     */
+    void setGfx(unsigned short position, bool value);
+
+  private:
+    /// Require a display update
+    bool updateGfx;
+    /// Display matrix
+    bool matrix[Chip8Gfx::WIDTH * Chip8Gfx::WIDTH];
+};
