@@ -7,6 +7,9 @@
  */
 
 #include "cpu.h"
+#include "gfx.h"
+#include "pad.h"
+#include "sound.h"
 
 class Chip8 {
   public:
@@ -14,5 +17,10 @@ class Chip8 {
     void cycle(void);
 
   private:
-
+    Chip8Cpu cpu;
+    Chip8Gfx gfx;
+    Chip8Pad pad;
+    Chip8Sound sound;
+    
+    unsigned char status;
 };
