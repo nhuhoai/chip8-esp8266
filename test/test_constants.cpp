@@ -10,20 +10,48 @@
 #include <unity.h>
 #include "../src/cpu.h"
 #include "../src/gfx.h"
+#include "../src/pad.h"
 
 #ifdef UNIT_TEST
 
 void test_cpu_constants(void) {
-  TEST_ASSERT_EQUAL(CPU_SPEED, 60);
-  TEST_ASSERT_EQUAL(CPU_MEM_SIZE, 4096);
-  TEST_ASSERT_EQUAL(CPU_MEM_START, 0x200);
-  TEST_ASSERT_EQUAL(CPU_V_SIZE, 16);
-  TEST_ASSERT_EQUAL(CPU_STACK_SIZE, 16);
+  TEST_ASSERT_EQUAL(Chip8Cpu::SPEED, 60);
+  TEST_ASSERT_EQUAL(Chip8Cpu::MEMORY_SIZE, 4096);
+  TEST_ASSERT_EQUAL(Chip8Cpu::V_SIZE, 16);
+  TEST_ASSERT_EQUAL(Chip8Cpu::STACK_SIZE, 16);
 }
 
 void test_gfx_constants(void) {
-  TEST_ASSERT_EQUAL(GFX_WIDTH, 64);
-  TEST_ASSERT_EQUAL(GFX_HEIGHT, 32);
+  const unsigned char fontset[80] = {
+    0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
+    0x20, 0x60, 0x20, 0x20, 0x70, // 1
+    0xF0, 0x10, 0xF0, 0x80, 0xF0, // 2
+    0xF0, 0x10, 0xF0, 0x10, 0xF0, // 3
+    0x90, 0x90, 0xF0, 0x10, 0x10, // 4
+    0xF0, 0x80, 0xF0, 0x10, 0xF0, // 5
+    0xF0, 0x80, 0xF0, 0x90, 0xF0, // 6
+    0xF0, 0x10, 0x20, 0x40, 0x40, // 7
+    0xF0, 0x90, 0xF0, 0x90, 0xF0, // 8
+    0xF0, 0x90, 0xF0, 0x10, 0xF0, // 9
+    0xF0, 0x90, 0xF0, 0x90, 0x90, // A
+    0xE0, 0x90, 0xE0, 0x90, 0xE0, // B
+    0xF0, 0x80, 0x80, 0x80, 0xF0, // C
+    0xE0, 0x90, 0x90, 0x90, 0xE0, // D
+    0xF0, 0x80, 0xF0, 0x80, 0xF0, // E
+    0xF0, 0x80, 0xF0, 0x80, 0x80  // F
+  };
+  unsigned char i;
+
+  TEST_ASSERT_EQUAL(Chip8Gfx::WIDTH, 64);
+  TEST_ASSERT_EQUAL(Chip8Gfx::HEIGHT, 32);
+  TEST_ASSERT_EQUAL(Chip8Gfx::FONTSET_SIZE, 80);
+  for(i = 0; i < 80; i++) {
+    TEST_ASSERT_EQUAL(Chip8Gfx::FONTSET[i], fontset[i]);
+  }
+}
+
+void test_pad_constants(void) {
+  TEST_ASSERT_EQUAL(Chip8Pad::PAD_SIZE, 16);
 }
 
 #endif

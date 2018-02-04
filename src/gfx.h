@@ -21,12 +21,12 @@ class Chip8Gfx {
     static const unsigned char FONTSET[Chip8Gfx::FONTSET_SIZE];
 
     /**
-     *  Init GFX part
+     *  Init GFX
      */
     void init(void);
 
     /**
-     *  GFX cycle life
+     *  GFX life cycle
      */
     void cycle(void);
 

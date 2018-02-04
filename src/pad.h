@@ -8,9 +8,19 @@
 
 class Chip8Pad {
   public:
+    /// Pad size
+    static const unsigned char PAD_SIZE = 16;
+
+    /**
+     *  Init pad
+     */
     void init(void);
+
+    /**
+     *  Pad life cycle
+     */
     void cycle(void);
 
   private:
-
+    bool pad[Chip8Pad::PAD_SIZE];
 };

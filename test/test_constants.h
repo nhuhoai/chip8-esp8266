@@ -12,4 +12,6 @@ void test_cpu_constants(void);
 
 void test_gfx_constants(void);
 
+void test_pad_constants(void);
+
 #endif

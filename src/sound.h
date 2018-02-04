@@ -8,9 +8,16 @@
 
 class Chip8Sound {
   public:
+    /**
+     *  Init sound
+     */
     void init(void);
+
+    /**
+     *  Sound life cycle
+     */
     void cycle(void);
 
   private:
-
+    unsigned char timer;
 };
