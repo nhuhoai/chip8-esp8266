@@ -9,9 +9,12 @@
 #include "pad.h"
 
 void Chip8Pad::init(void) {
-
+  unsigned char i;
+  for(i = 0; i < Chip8Pad::PAD_SIZE; i++) {
+    this->pad[i] = false;
+  }
 }
 
 void Chip8Pad::cycle(void) {
-
+  // Detect keypad pressed
 }

@@ -12,6 +12,8 @@ class Chip8Cpu {
     static const unsigned char SPEED = 60;
     /// Memory size
     static const unsigned short MEMORY_SIZE = 4096;
+    /// Memory start
+    static const unsigned short MEMORY_START = 0x200;
     /// Register size
     static const unsigned char V_SIZE = 16;
     /// Stack size

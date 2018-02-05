@@ -9,9 +9,15 @@
 #include "sound.h"
 
 void Chip8Sound::init(void) {
-  
+  this->timer = 0;
 }
 
 void Chip8Sound::cycle(void) {
+  if(this->timer > 0) {
+    // Bip on
 
+    this->timer--;
+  } else {
+    // Bip off
+  }
 }
