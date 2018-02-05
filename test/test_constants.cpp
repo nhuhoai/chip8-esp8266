@@ -6,17 +6,18 @@
  *  @brief    Constants test
  */
 
+#ifdef UNIT_TEST
+
 #include <Arduino.h>
 #include <unity.h>
 #include "../src/cpu.h"
 #include "../src/gfx.h"
 #include "../src/pad.h"
 
-#ifdef UNIT_TEST
-
 void test_cpu_constants(void) {
   TEST_ASSERT_EQUAL(Chip8Cpu::SPEED, 60);
   TEST_ASSERT_EQUAL(Chip8Cpu::MEMORY_SIZE, 4096);
+  TEST_ASSERT_EQUAL(Chip8Cpu::MEMORY_START, 0x200);
   TEST_ASSERT_EQUAL(Chip8Cpu::V_SIZE, 16);
   TEST_ASSERT_EQUAL(Chip8Cpu::STACK_SIZE, 16);
 }

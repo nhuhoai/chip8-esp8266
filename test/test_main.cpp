@@ -11,12 +11,13 @@
 #include <Arduino.h>
 #include <unity.h>
 #include "test_constants.h"
+#include "test_init.h"
 
 unsigned char cycle = 0;
 
 void setup() {
   delay(2000);
-
+  cycle = 0;
   UNITY_BEGIN();
 }
 
@@ -24,12 +25,14 @@ void loop() {
   switch(cycle) {
     case 0:
       test_cpu_constants();
-      delay(200);
       break;
 
     case 1:
       test_gfx_constants();
-      delay(200);
+      break;
+
+    case 2:
+      test_pad_constants();
       break;
 
     default:
